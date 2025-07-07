@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{%block heading%}
+
+<form method="POST">
+
+<div class="container" style="padding-top: 10%;padding-left: 7%;">
+    <div class="row">
+        <div class="col-4 ">
+            <div class="card text-dark border-success bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header" style="text-align: center;"> <b> START </b> </div>
+                <div class="card-body">
+                  <p class="card-text"> Bắt đầu bỏ phiếu! </p>
+                  <input type="submit" name="adBtn" value="START" class="btn btn-primary"></input>
+                </div>
+              </div>            
+        </div>
+        <div class="col-4 ">
+            <div class="card text-dark border-success bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header"style="text-align: center;">  <b> Kết Quả  </b> </div>
+                <div class="card-body">
+                  <p class="card-text"> Kết quả bỏ phiếu: </p>
+<p>De 1: {{ candidates[0][2] }} vote</p>
+<p>De 2: {{ candidates[1][2] }} vote</p>
+<p>De 3: {{ candidates[2][2] }} vote</p>
+                  <input type="submit" name="adBtn" value="RESULT" class="btn btn-primary"></input>
+                </div>
+              </div>
+        </div>
+        <div class="col-4 ">
+            <div class="card text-dark border-success bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header"style="text-align: center;">  <b> END </b> </div>
+                <div class="card-body">
+                  <p class="card-text"> Kết thúc bỏ phiếu!  </p>
+                  <input type="submit" name="adBtn" value="END" class="btn btn-primary"></input>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+</form>
+
+{%endblock%}

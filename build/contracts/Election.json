@@ -1,0 +1,7780 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "candidates",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "voteCount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "end",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getCandidatesCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "goingon",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalVote",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_candidateId",
+          "type": "uint256"
+        }
+      ],
+      "name": "vote",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "voters",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/Election.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Election.sol",
+    "exportedSymbols": {
+      "Election": [
+        133
+      ]
+    },
+    "id": 134,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "31:32:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Election",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 133,
+        "linearizedBaseContracts": [
+          133
+        ],
+        "name": "Election",
+        "nameLocation": "74:8:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Election.Candidate",
+            "id": 8,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "122:2:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 8,
+                "src": "117:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "117:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "141:4:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 8,
+                "src": "134:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "134:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7,
+                "mutability": "mutable",
+                "name": "voteCount",
+                "nameLocation": "160:9:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 8,
+                "src": "155:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "155:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Candidate",
+            "nameLocation": "97:9:0",
+            "nodeType": "StructDefinition",
+            "scope": 133,
+            "src": "90:86:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "0a3a906c",
+            "id": 11,
+            "mutability": "mutable",
+            "name": "goingon",
+            "nameLocation": "194:7:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 133,
+            "src": "182:26:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 9,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "182:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "hexValue": "74727565",
+              "id": 10,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "204:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "true"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "8da5cb5b",
+            "id": 13,
+            "mutability": "mutable",
+            "name": "owner",
+            "nameLocation": "284:5:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 133,
+            "src": "269:20:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 12,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "269:7:0",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "a3ec138d",
+            "id": 17,
+            "mutability": "mutable",
+            "name": "voters",
+            "nameLocation": "328:6:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 133,
+            "src": "296:38:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 16,
+              "keyName": "",
+              "keyNameLocation": "-1:-1:-1",
+              "keyType": {
+                "id": 14,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "304:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "296:24:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueName": "",
+              "valueNameLocation": "-1:-1:-1",
+              "valueType": {
+                "id": 15,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "315:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "3477ee2e",
+            "id": 21,
+            "mutability": "mutable",
+            "name": "candidates",
+            "nameLocation": "436:10:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 133,
+            "src": "417:29:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Candidate_$8_storage_$dyn_storage",
+              "typeString": "struct Election.Candidate[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 19,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 18,
+                  "name": "Candidate",
+                  "nameLocations": [
+                    "417:9:0"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 8,
+                  "src": "417:9:0"
+                },
+                "referencedDeclaration": 8,
+                "src": "417:9:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Candidate_$8_storage_ptr",
+                  "typeString": "struct Election.Candidate"
+                }
+              },
+              "id": 20,
+              "nodeType": "ArrayTypeName",
+              "src": "417:11:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Candidate_$8_storage_$dyn_storage_ptr",
+                "typeString": "struct Election.Candidate[]"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "f1cea4c7",
+            "id": 24,
+            "mutability": "mutable",
+            "name": "totalVote",
+            "nameLocation": "562:9:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 133,
+            "src": "550:25:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 22,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "550:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "30",
+              "id": 23,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "574:1:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 62,
+              "nodeType": "Block",
+              "src": "593:165:0",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 30,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 27,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13,
+                      "src": "599:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "expression": {
+                        "id": 28,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "607:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 29,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "611:6:0",
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "src": "607:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "599:18:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 31,
+                  "nodeType": "ExpressionStatement",
+                  "src": "599:18:0"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "hexValue": "30",
+                            "id": 36,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "649:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          },
+                          {
+                            "hexValue": "44652031",
+                            "id": 37,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "652:6:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_075a0b031c6fb6d30a9e127742112d9d43d75f81189ba5ecb5feeaf46abba812",
+                              "typeString": "literal_string \"De 1\""
+                            },
+                            "value": "De 1"
+                          },
+                          {
+                            "hexValue": "30",
+                            "id": 38,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "660:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            {
+                              "typeIdentifier": "t_stringliteral_075a0b031c6fb6d30a9e127742112d9d43d75f81189ba5ecb5feeaf46abba812",
+                              "typeString": "literal_string \"De 1\""
+                            },
+                            {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            }
+                          ],
+                          "id": 35,
+                          "name": "Candidate",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 8,
+                          "src": "639:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_Candidate_$8_storage_ptr_$",
+                            "typeString": "type(struct Election.Candidate storage pointer)"
+                          }
+                        },
+                        "id": 39,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "639:23:0",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Candidate_$8_memory_ptr",
+                          "typeString": "struct Election.Candidate memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Candidate_$8_memory_ptr",
+                          "typeString": "struct Election.Candidate memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 32,
+                        "name": "candidates",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21,
+                        "src": "623:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Candidate_$8_storage_$dyn_storage",
+                          "typeString": "struct Election.Candidate storage ref[] storage ref"
+                        }
+                      },
+                      "id": 34,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "634:4:0",
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "623:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Candidate_$8_storage_$dyn_storage_ptr_$_t_struct$_Candidate_$8_storage_$returns$__$attached_to$_t_array$_t_struct$_Candidate_$8_storage_$dyn_storage_ptr_$",
+                        "typeString": "function (struct Election.Candidate storage ref[] storage pointer,struct Election.Candidate storage ref)"
+                      }
+                    },
+                    "id": 40,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "623:40:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 41,
+                  "nodeType": "ExpressionStatement",
+                  "src": "623:40:0"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "hexValue": "31",
+                            "id": 46,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "695:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_1_by_1",
+                              "typeString": "int_const 1"
+                            },
+                            "value": "1"
+                          },
+                          {
+                            "hexValue": "44652032",
+                            "id": 47,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "698:6:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_0f69f477242a863376a9c230241831f5d9ce5aa38a472c9c715531f1ed67cd2f",
+                              "typeString": "literal_string \"De 2\""
+                            },
+                            "value": "De 2"
+                          },
+                          {
+                            "hexValue": "30",
+                            "id": 48,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "706:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_rational_1_by_1",
+                              "typeString": "int_const 1"
+                            },
+                            {
+                              "typeIdentifier": "t_stringliteral_0f69f477242a863376a9c230241831f5d9ce5aa38a472c9c715531f1ed67cd2f",
+                              "typeString": "literal_string \"De 2\""
+                            },
+                            {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            }
+                          ],
+                          "id": 45,
+                          "name": "Candidate",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 8,
+                          "src": "685:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_Candidate_$8_storage_ptr_$",
+                            "typeString": "type(struct Election.Candidate storage pointer)"
+                          }
+                        },
+                        "id": 49,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "685:23:0",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Candidate_$8_memory_ptr",
+                          "typeString": "struct Election.Candidate memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Candidate_$8_memory_ptr",
+                          "typeString": "struct Election.Candidate memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 42,
+                        "name": "candidates",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21,
+                        "src": "669:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Candidate_$8_storage_$dyn_storage",
+                          "typeString": "struct Election.Candidate storage ref[] storage ref"
+                        }
+                      },
+                      "id": 44,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "680:4:0",
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "669:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Candidate_$8_storage_$dyn_storage_ptr_$_t_struct$_Candidate_$8_storage_$returns$__$attached_to$_t_array$_t_struct$_Candidate_$8_storage_$dyn_storage_ptr_$",
+                        "typeString": "function (struct Election.Candidate storage ref[] storage pointer,struct Election.Candidate storage ref)"
+                      }
+                    },
+                    "id": 50,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "669:40:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 51,
+                  "nodeType": "ExpressionStatement",
+                  "src": "669:40:0"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "hexValue": "32",
+                            "id": 56,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "741:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_2_by_1",
+                              "typeString": "int_const 2"
+                            },
+                            "value": "2"
+                          },
+                          {
+                            "hexValue": "44652033",
+                            "id": 57,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "744:6:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_21e6e5364223040f6d89fac54c21b6d8126432c8ca21fb460229f9a671db64f4",
+                              "typeString": "literal_string \"De 3\""
+                            },
+                            "value": "De 3"
+                          },
+                          {
+                            "hexValue": "30",
+                            "id": 58,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "752:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_rational_2_by_1",
+                              "typeString": "int_const 2"
+                            },
+                            {
+                              "typeIdentifier": "t_stringliteral_21e6e5364223040f6d89fac54c21b6d8126432c8ca21fb460229f9a671db64f4",
+                              "typeString": "literal_string \"De 3\""
+                            },
+                            {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            }
+                          ],
+                          "id": 55,
+                          "name": "Candidate",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 8,
+                          "src": "731:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_Candidate_$8_storage_ptr_$",
+                            "typeString": "type(struct Election.Candidate storage pointer)"
+                          }
+                        },
+                        "id": 59,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "731:23:0",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Candidate_$8_memory_ptr",
+                          "typeString": "struct Election.Candidate memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Candidate_$8_memory_ptr",
+                          "typeString": "struct Election.Candidate memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 52,
+                        "name": "candidates",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21,
+                        "src": "715:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Candidate_$8_storage_$dyn_storage",
+                          "typeString": "struct Election.Candidate storage ref[] storage ref"
+                        }
+                      },
+                      "id": 54,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "726:4:0",
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "715:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Candidate_$8_storage_$dyn_storage_ptr_$_t_struct$_Candidate_$8_storage_$returns$__$attached_to$_t_array$_t_struct$_Candidate_$8_storage_$dyn_storage_ptr_$",
+                        "typeString": "function (struct Election.Candidate storage ref[] storage pointer,struct Election.Candidate storage ref)"
+                      }
+                    },
+                    "id": 60,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "715:40:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 61,
+                  "nodeType": "ExpressionStatement",
+                  "src": "715:40:0"
+                }
+              ]
+            },
+            "id": 63,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 25,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "590:2:0"
+            },
+            "returnParameters": {
+              "id": 26,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "593:0:0"
+            },
+            "scope": 133,
+            "src": "578:180:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 78,
+              "nodeType": "Block",
+              "src": "882:93:0",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 70,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "expression": {
+                            "id": 67,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "900:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 68,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "904:6:0",
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "900:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "id": 69,
+                          "name": "owner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13,
+                          "src": "914:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "900:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "4f4e4c59204f574e45522043414e20454e44",
+                        "id": 71,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "922:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_7b1fdf1468fc2bc00c6545577cb40fc755ec3e3c7df91c3448873197fc714a47",
+                          "typeString": "literal_string \"ONLY OWNER CAN END\""
+                        },
+                        "value": "ONLY OWNER CAN END"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_7b1fdf1468fc2bc00c6545577cb40fc755ec3e3c7df91c3448873197fc714a47",
+                          "typeString": "literal_string \"ONLY OWNER CAN END\""
+                        }
+                      ],
+                      "id": 66,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "892:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 72,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "892:51:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 73,
+                  "nodeType": "ExpressionStatement",
+                  "src": "892:51:0"
+                },
+                {
+                  "expression": {
+                    "id": 76,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 74,
+                      "name": "goingon",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11,
+                      "src": "953:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "66616c7365",
+                      "id": 75,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "963:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "953:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 77,
+                  "nodeType": "ExpressionStatement",
+                  "src": "953:15:0"
+                }
+              ]
+            },
+            "functionSelector": "efbe1c1c",
+            "id": 79,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "end",
+            "nameLocation": "868:3:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 64,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "872:2:0"
+            },
+            "returnParameters": {
+              "id": 65,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "882:0:0"
+            },
+            "scope": 133,
+            "src": "859:116:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 122,
+              "nodeType": "Block",
+              "src": "1098:381:0",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 89,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "1116:19:0",
+                        "subExpression": {
+                          "baseExpression": {
+                            "id": 85,
+                            "name": "voters",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 17,
+                            "src": "1117:6:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                              "typeString": "mapping(address => bool)"
+                            }
+                          },
+                          "id": 88,
+                          "indexExpression": {
+                            "expression": {
+                              "id": 86,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": -15,
+                              "src": "1124:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 87,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "1128:6:0",
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "src": "1124:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1117:18:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "416c726561647920766f746564",
+                        "id": 90,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1137:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_512fc59044d4f0722f9346c450973ffe8aac7aa1142e536739987018593c53b6",
+                          "typeString": "literal_string \"Already voted\""
+                        },
+                        "value": "Already voted"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_512fc59044d4f0722f9346c450973ffe8aac7aa1142e536739987018593c53b6",
+                          "typeString": "literal_string \"Already voted\""
+                        }
+                      ],
+                      "id": 84,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1108:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 91,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1108:45:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 92,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1108:45:0"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 97,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 94,
+                          "name": "_candidateId",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 81,
+                          "src": "1269:12:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "<",
+                        "rightExpression": {
+                          "expression": {
+                            "id": 95,
+                            "name": "candidates",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 21,
+                            "src": "1284:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_struct$_Candidate_$8_storage_$dyn_storage",
+                              "typeString": "struct Election.Candidate storage ref[] storage ref"
+                            }
+                          },
+                          "id": 96,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "1295:6:0",
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "src": "1284:17:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1269:32:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "496e76616c69642063616e646964617465",
+                        "id": 98,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1303:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_5e08d3f48383789a6de57bd1ce2690d9c2e7e2730c9898292987cc6cddf215e1",
+                          "typeString": "literal_string \"Invalid candidate\""
+                        },
+                        "value": "Invalid candidate"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_5e08d3f48383789a6de57bd1ce2690d9c2e7e2730c9898292987cc6cddf215e1",
+                          "typeString": "literal_string \"Invalid candidate\""
+                        }
+                      ],
+                      "id": 93,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1261:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 99,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1261:62:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 100,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1261:62:0"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 102,
+                        "name": "goingon",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "1342:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "456c656374696f6e20656e646564",
+                        "id": 103,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1351:16:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_6fbfea2dfb19a379878c5c61c91ef688056b752551e4abf74fd7e05ce9ee5ee6",
+                          "typeString": "literal_string \"Election ended\""
+                        },
+                        "value": "Election ended"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_6fbfea2dfb19a379878c5c61c91ef688056b752551e4abf74fd7e05ce9ee5ee6",
+                          "typeString": "literal_string \"Election ended\""
+                        }
+                      ],
+                      "id": 101,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1334:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 104,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1334:34:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 105,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1334:34:0"
+                },
+                {
+                  "expression": {
+                    "id": 111,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 106,
+                        "name": "voters",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 17,
+                        "src": "1379:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 109,
+                      "indexExpression": {
+                        "expression": {
+                          "id": 107,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "1386:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 108,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1390:6:0",
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "1386:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1379:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "74727565",
+                      "id": 110,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1400:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1379:25:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 112,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1379:25:0"
+                },
+                {
+                  "expression": {
+                    "id": 117,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "1415:36:0",
+                    "subExpression": {
+                      "expression": {
+                        "baseExpression": {
+                          "id": 113,
+                          "name": "candidates",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 21,
+                          "src": "1415:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_struct$_Candidate_$8_storage_$dyn_storage",
+                            "typeString": "struct Election.Candidate storage ref[] storage ref"
+                          }
+                        },
+                        "id": 115,
+                        "indexExpression": {
+                          "id": 114,
+                          "name": "_candidateId",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 81,
+                          "src": "1426:12:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1415:24:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Candidate_$8_storage",
+                          "typeString": "struct Election.Candidate storage ref"
+                        }
+                      },
+                      "id": 116,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberLocation": "1440:9:0",
+                      "memberName": "voteCount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 7,
+                      "src": "1415:34:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 118,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1415:36:0"
+                },
+                {
+                  "expression": {
+                    "id": 120,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "1461:11:0",
+                    "subExpression": {
+                      "id": 119,
+                      "name": "totalVote",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 24,
+                      "src": "1461:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 121,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1461:11:0"
+                }
+              ]
+            },
+            "functionSelector": "0121b93f",
+            "id": 123,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vote",
+            "nameLocation": "1066:4:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 82,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 81,
+                  "mutability": "mutable",
+                  "name": "_candidateId",
+                  "nameLocation": "1077:12:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 123,
+                  "src": "1072:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 80,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1072:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1071:19:0"
+            },
+            "returnParameters": {
+              "id": 83,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1098:0:0"
+            },
+            "scope": 133,
+            "src": "1057:422:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 131,
+              "nodeType": "Block",
+              "src": "1604:41:0",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "id": 128,
+                      "name": "candidates",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21,
+                      "src": "1621:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Candidate_$8_storage_$dyn_storage",
+                        "typeString": "struct Election.Candidate storage ref[] storage ref"
+                      }
+                    },
+                    "id": 129,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberLocation": "1632:6:0",
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "src": "1621:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 127,
+                  "id": 130,
+                  "nodeType": "Return",
+                  "src": "1614:24:0"
+                }
+              ]
+            },
+            "functionSelector": "bb9aa28f",
+            "id": 132,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getCandidatesCount",
+            "nameLocation": "1556:18:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 124,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1574:2:0"
+            },
+            "returnParameters": {
+              "id": 127,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 126,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 132,
+                  "src": "1598:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 125,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1598:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1597:6:0"
+            },
+            "scope": 133,
+            "src": "1547:98:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 134,
+        "src": "65:1582:0",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "31:1616:0"
+  },
+  "bytecode": "60806040526000805460ff1916600117815560035534801561002057600080fd5b5060008054610100600160a81b0319163361010002178155604080516060810182528281528151808301835260048152634465203160e01b6020808301919091528201908152918101839052600280546001810182559352805160008051602061085683398151915260039094029384019081559151909260008051602061087683398151915201906100b39082610274565b50604091820151600291820155815160608101835260018082528351808501855260048152632232901960e11b6020828101919091528301908152600094830185905283549182018455929093528051600390930260008051602061085683398151915281019384559151909291600080516020610876833981519152019061013c9082610274565b5060409182015160029182015581516060810183528181528251808401845260048152634465203360e01b602082810191909152820190815260009382018490528254600181018455929093528051600390920260008051602061085683398151915281019283559251909260008051602061087683398151915201906101c39082610274565b50604082015181600201555050610332565b634e487b7160e01b600052604160045260246000fd5b600181811c908216806101ff57607f821691505b60208210810361021f57634e487b7160e01b600052602260045260246000fd5b50919050565b601f82111561026f57806000526020600020601f840160051c8101602085101561024c5750805b601f840160051c820191505b8181101561026c5760008155600101610258565b50505b505050565b81516001600160401b0381111561028d5761028d6101d5565b6102a18161029b84546101eb565b84610225565b6020601f8211600181146102d557600083156102bd5750848201515b600019600385901b1c1916600184901b17845561026c565b600084815260208120601f198516915b8281101561030557878501518255602094850194600190920191016102e5565b50848210156103235786840151600019600387901b60f8161c191681555b50505050600190811b01905550565b610515806103416000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c8063a3ec138d1161005b578063a3ec138d14610116578063bb9aa28f14610139578063efbe1c1c1461014b578063f1cea4c71461015357600080fd5b80630121b93f1461008d5780630a3a906c146100a25780633477ee2e146100c45780638da5cb5b146100e6575b600080fd5b6100a061009b3660046103c3565b61015c565b005b6000546100af9060ff1681565b60405190151581526020015b60405180910390f35b6100d76100d23660046103c3565b6102a5565b6040516100bb939291906103dc565b6000546100fe9061010090046001600160a01b031681565b6040516001600160a01b0390911681526020016100bb565b6100af610124366004610438565b60016020526000908152604090205460ff1681565b6002545b6040519081526020016100bb565b6100a0610363565b61013d60035481565b3360009081526001602052604090205460ff16156101b15760405162461bcd60e51b815260206004820152600d60248201526c105b1c9958591e481d9bdd1959609a1b60448201526064015b60405180910390fd5b60025481106101f65760405162461bcd60e51b8152602060048201526011602482015270496e76616c69642063616e64696461746560781b60448201526064016101a8565b60005460ff166102395760405162461bcd60e51b815260206004820152600e60248201526d115b1958dd1a5bdb88195b99195960921b60448201526064016101a8565b336000908152600160208190526040909120805460ff19169091179055600280548290811061026a5761026a610468565b6000918252602082206002600390920201018054916102888361047e565b90915550506003805490600061029d8361047e565b919050555050565b600281815481106102b557600080fd5b600091825260209091206003909102018054600182018054919350906102da906104a5565b80601f0160208091040260200160405190810160405280929190818152602001828054610306906104a5565b80156103535780601f1061032857610100808354040283529160200191610353565b820191906000526020600020905b81548152906001019060200180831161033657829003601f168201915b5050505050908060020154905083565b60005461010090046001600160a01b031633146103b75760405162461bcd60e51b815260206004820152601260248201527113d393164813d5d391548810d0538811539160721b60448201526064016101a8565b6000805460ff19169055565b6000602082840312156103d557600080fd5b5035919050565b838152606060208201526000835180606084015260005b8181101561041057602081870181015160808684010152016103f3565b506000608082850101526080601f19601f830116840101915050826040830152949350505050565b60006020828403121561044a57600080fd5b81356001600160a01b038116811461046157600080fd5b9392505050565b634e487b7160e01b600052603260045260246000fd5b60006001820161049e57634e487b7160e01b600052601160045260246000fd5b5060010190565b600181811c908216806104b957607f821691505b6020821081036104d957634e487b7160e01b600052602260045260246000fd5b5091905056fea26469706673582212202c65767aa0a5186b000443df872ebd6315fe422a1c4ac1919f3c05235c35106f64736f6c634300081c0033405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5acf",
+  "bytecodeSha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.28+commit.7893614a"
+  },
+  "contractName": "Election",
+  "coverageMap": {
+    "branches": {
+      "0": {
+        "Election.end": {
+          "12": [
+            900,
+            919,
+            true
+          ]
+        },
+        "Election.vote": {
+          "9": [
+            1116,
+            1135,
+            true
+          ],
+          "10": [
+            1269,
+            1301,
+            true
+          ],
+          "11": [
+            1342,
+            1349,
+            true
+          ]
+        }
+      }
+    },
+    "statements": {
+      "0": {
+        "Election.end": {
+          "7": [
+            892,
+            943
+          ],
+          "8": [
+            953,
+            968
+          ]
+        },
+        "Election.getCandidatesCount": {
+          "0": [
+            1614,
+            1638
+          ]
+        },
+        "Election.vote": {
+          "1": [
+            1108,
+            1153
+          ],
+          "2": [
+            1261,
+            1323
+          ],
+          "3": [
+            1334,
+            1368
+          ],
+          "4": [
+            1379,
+            1404
+          ],
+          "5": [
+            1415,
+            1451
+          ],
+          "6": [
+            1461,
+            1472
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "608060405234801561001057600080fd5b50600436106100885760003560e01c8063a3ec138d1161005b578063a3ec138d14610116578063bb9aa28f14610139578063efbe1c1c1461014b578063f1cea4c71461015357600080fd5b80630121b93f1461008d5780630a3a906c146100a25780633477ee2e146100c45780638da5cb5b146100e6575b600080fd5b6100a061009b3660046103c3565b61015c565b005b6000546100af9060ff1681565b60405190151581526020015b60405180910390f35b6100d76100d23660046103c3565b6102a5565b6040516100bb939291906103dc565b6000546100fe9061010090046001600160a01b031681565b6040516001600160a01b0390911681526020016100bb565b6100af610124366004610438565b60016020526000908152604090205460ff1681565b6002545b6040519081526020016100bb565b6100a0610363565b61013d60035481565b3360009081526001602052604090205460ff16156101b15760405162461bcd60e51b815260206004820152600d60248201526c105b1c9958591e481d9bdd1959609a1b60448201526064015b60405180910390fd5b60025481106101f65760405162461bcd60e51b8152602060048201526011602482015270496e76616c69642063616e64696461746560781b60448201526064016101a8565b60005460ff166102395760405162461bcd60e51b815260206004820152600e60248201526d115b1958dd1a5bdb88195b99195960921b60448201526064016101a8565b336000908152600160208190526040909120805460ff19169091179055600280548290811061026a5761026a610468565b6000918252602082206002600390920201018054916102888361047e565b90915550506003805490600061029d8361047e565b919050555050565b600281815481106102b557600080fd5b600091825260209091206003909102018054600182018054919350906102da906104a5565b80601f0160208091040260200160405190810160405280929190818152602001828054610306906104a5565b80156103535780601f1061032857610100808354040283529160200191610353565b820191906000526020600020905b81548152906001019060200180831161033657829003601f168201915b5050505050908060020154905083565b60005461010090046001600160a01b031633146103b75760405162461bcd60e51b815260206004820152601260248201527113d393164813d5d391548810d0538811539160721b60448201526064016101a8565b6000805460ff19169055565b6000602082840312156103d557600080fd5b5035919050565b838152606060208201526000835180606084015260005b8181101561041057602081870181015160808684010152016103f3565b506000608082850101526080601f19601f830116840101915050826040830152949350505050565b60006020828403121561044a57600080fd5b81356001600160a01b038116811461046157600080fd5b9392505050565b634e487b7160e01b600052603260045260246000fd5b60006001820161049e57634e487b7160e01b600052601160045260246000fd5b5060010190565b600181811c908216806104b957607f821691505b6020821081036104d957634e487b7160e01b600052602260045260246000fd5b5091905056fea26469706673582212202c65767aa0a5186b000443df872ebd6315fe422a1c4ac1919f3c05235c35106f64736f6c634300081c0033",
+  "deployedSourceMap": "65:1582:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1057:422;;;;;;:::i;:::-;;:::i;:::-;;182:26;;;;;;;;;;;;364:14:3;;357:22;339:41;;327:2;312:18;182:26:0;;;;;;;;417:29;;;;;;:::i;:::-;;:::i;:::-;;;;;;;;;:::i;269:20::-;;;;;;;;-1:-1:-1;;;;;269:20:0;;;;;;-1:-1:-1;;;;;1232:32:3;;;1214:51;;1202:2;1187:18;269:20:0;1068:203:3;296:38:0;;;;;;:::i;:::-;;;;;;;;;;;;;;;;1547:98;1621:10;:17;1547:98;;;1713:25:3;;;1701:2;1686:18;1547:98:0;1567:177:3;859:116:0;;;:::i;550:25::-;;;;;;1057:422;1124:10;1117:18;;;;:6;:18;;;;;;;;1116:19;1108:45;;;;-1:-1:-1;;;1108:45:0;;1951:2:3;1108:45:0;;;1933:21:3;1990:2;1970:18;;;1963:30;-1:-1:-1;;;2009:18:3;;;2002:43;2062:18;;1108:45:0;;;;;;;;;1284:10;:17;1269:32;;1261:62;;;;-1:-1:-1;;;1261:62:0;;2293:2:3;1261:62:0;;;2275:21:3;2332:2;2312:18;;;2305:30;-1:-1:-1;;;2351:18:3;;;2344:47;2408:18;;1261:62:0;2091:341:3;1261:62:0;1342:7;;;;1334:34;;;;-1:-1:-1;;;1334:34:0;;2639:2:3;1334:34:0;;;2621:21:3;2678:2;2658:18;;;2651:30;-1:-1:-1;;;2697:18:3;;;2690:44;2751:18;;1334:34:0;2437:338:3;1334:34:0;1386:10;1379:18;;;;1400:4;1379:18;;;;;;;;:25;;-1:-1:-1;;1379:25:0;;;;;;1415:10;:24;;1426:12;;1415:24;;;;;;:::i;:::-;;;;;;;;:34;:24;;;;;:34;:36;;;;;;:::i;:::-;;;;-1:-1:-1;;1461:9:0;:11;;;:9;:11;;;:::i;:::-;;;;;;1057:422;:::o;417:29::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;417:29:0;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;859:116::-;914:5;;;;;-1:-1:-1;;;;;914:5:0;900:10;:19;892:51;;;;-1:-1:-1;;;892:51:0;;3736:2:3;892:51:0;;;3718:21:3;3775:2;3755:18;;;3748:30;-1:-1:-1;;;3794:18:3;;;3787:48;3852:18;;892:51:0;3534:342:3;892:51:0;963:5;953:15;;-1:-1:-1;;953:15:0;;;859:116::o;14:180:3:-;73:6;126:2;114:9;105:7;101:23;97:32;94:52;;;142:1;139;132:12;94:52;-1:-1:-1;165:23:3;;14:180;-1:-1:-1;14:180:3:o;391:672::-;596:6;585:9;578:25;639:2;634;623:9;619:18;612:30;559:4;671:6;665:13;714:6;709:2;698:9;694:18;687:34;739:1;749:141;763:6;760:1;757:13;749:141;;;875:2;859:14;;;855:23;;849:30;843:3;824:17;;;820:27;813:67;778:10;749:141;;;753:3;940:1;934:3;925:6;914:9;910:22;906:32;899:43;1010:3;1003:2;999:7;994:2;986:6;982:15;978:29;967:9;963:45;959:55;951:63;;;1050:6;1045:2;1034:9;1030:18;1023:34;391:672;;;;;;:::o;1276:286::-;1335:6;1388:2;1376:9;1367:7;1363:23;1359:32;1356:52;;;1404:1;1401;1394:12;1356:52;1430:23;;-1:-1:-1;;;;;1482:31:3;;1472:42;;1462:70;;1528:1;1525;1518:12;1462:70;1551:5;1276:286;-1:-1:-1;;;1276:286:3:o;2780:127::-;2841:10;2836:3;2832:20;2829:1;2822:31;2872:4;2869:1;2862:15;2896:4;2893:1;2886:15;2912:232;2951:3;2972:17;;;2969:140;;3031:10;3026:3;3022:20;3019:1;3012:31;3066:4;3063:1;3056:15;3094:4;3091:1;3084:15;2969:140;-1:-1:-1;3136:1:3;3125:13;;2912:232::o;3149:380::-;3228:1;3224:12;;;;3271;;;3292:61;;3346:4;3338:6;3334:17;3324:27;;3292:61;3399:2;3391:6;3388:14;3368:18;3365:38;3362:161;;3445:10;3440:3;3436:20;3433:1;3426:31;3480:4;3477:1;3470:15;3508:4;3505:1;3498:15;3362:161;;3149:380;;;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    65,
+    1647
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x88 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0xA3EC138D GT PUSH2 0x5B JUMPI DUP1 PUSH4 0xA3EC138D EQ PUSH2 0x116 JUMPI DUP1 PUSH4 0xBB9AA28F EQ PUSH2 0x139 JUMPI DUP1 PUSH4 0xEFBE1C1C EQ PUSH2 0x14B JUMPI DUP1 PUSH4 0xF1CEA4C7 EQ PUSH2 0x153 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 PUSH4 0x121B93F EQ PUSH2 0x8D JUMPI DUP1 PUSH4 0xA3A906C EQ PUSH2 0xA2 JUMPI DUP1 PUSH4 0x3477EE2E EQ PUSH2 0xC4 JUMPI DUP1 PUSH4 0x8DA5CB5B EQ PUSH2 0xE6 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0xA0 PUSH2 0x9B CALLDATASIZE PUSH1 0x4 PUSH2 0x3C3 JUMP JUMPDEST PUSH2 0x15C JUMP JUMPDEST STOP JUMPDEST PUSH1 0x0 SLOAD PUSH2 0xAF SWAP1 PUSH1 0xFF AND DUP2 JUMP JUMPDEST PUSH1 0x40 MLOAD SWAP1 ISZERO ISZERO DUP2 MSTORE PUSH1 0x20 ADD JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH2 0xD7 PUSH2 0xD2 CALLDATASIZE PUSH1 0x4 PUSH2 0x3C3 JUMP JUMPDEST PUSH2 0x2A5 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH2 0xBB SWAP4 SWAP3 SWAP2 SWAP1 PUSH2 0x3DC JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH2 0xFE SWAP1 PUSH2 0x100 SWAP1 DIV PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP2 AND DUP2 MSTORE PUSH1 0x20 ADD PUSH2 0xBB JUMP JUMPDEST PUSH2 0xAF PUSH2 0x124 CALLDATASIZE PUSH1 0x4 PUSH2 0x438 JUMP JUMPDEST PUSH1 0x1 PUSH1 0x20 MSTORE PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x40 SWAP1 KECCAK256 SLOAD PUSH1 0xFF AND DUP2 JUMP JUMPDEST PUSH1 0x2 SLOAD JUMPDEST PUSH1 0x40 MLOAD SWAP1 DUP2 MSTORE PUSH1 0x20 ADD PUSH2 0xBB JUMP JUMPDEST PUSH2 0xA0 PUSH2 0x363 JUMP JUMPDEST PUSH2 0x13D PUSH1 0x3 SLOAD DUP2 JUMP JUMPDEST CALLER PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x1 PUSH1 0x20 MSTORE PUSH1 0x40 SWAP1 KECCAK256 SLOAD PUSH1 0xFF AND ISZERO PUSH2 0x1B1 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0xD PUSH1 0x24 DUP3 ADD MSTORE PUSH13 0x105B1C9958591E481D9BDD1959 PUSH1 0x9A SHL PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 REVERT JUMPDEST PUSH1 0x2 SLOAD DUP2 LT PUSH2 0x1F6 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x11 PUSH1 0x24 DUP3 ADD MSTORE PUSH17 0x496E76616C69642063616E646964617465 PUSH1 0x78 SHL PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD PUSH2 0x1A8 JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0xFF AND PUSH2 0x239 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0xE PUSH1 0x24 DUP3 ADD MSTORE PUSH14 0x115B1958DD1A5BDB88195B991959 PUSH1 0x92 SHL PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD PUSH2 0x1A8 JUMP JUMPDEST CALLER PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x1 PUSH1 0x20 DUP2 SWAP1 MSTORE PUSH1 0x40 SWAP1 SWAP2 KECCAK256 DUP1 SLOAD PUSH1 0xFF NOT AND SWAP1 SWAP2 OR SWAP1 SSTORE PUSH1 0x2 DUP1 SLOAD DUP3 SWAP1 DUP2 LT PUSH2 0x26A JUMPI PUSH2 0x26A PUSH2 0x468 JUMP JUMPDEST PUSH1 0x0 SWAP2 DUP3 MSTORE PUSH1 0x20 DUP3 KECCAK256 PUSH1 0x2 PUSH1 0x3 SWAP1 SWAP3 MUL ADD ADD DUP1 SLOAD SWAP2 PUSH2 0x288 DUP4 PUSH2 0x47E JUMP JUMPDEST SWAP1 SWAP2 SSTORE POP POP PUSH1 0x3 DUP1 SLOAD SWAP1 PUSH1 0x0 PUSH2 0x29D DUP4 PUSH2 0x47E JUMP JUMPDEST SWAP2 SWAP1 POP SSTORE POP POP JUMP JUMPDEST PUSH1 0x2 DUP2 DUP2 SLOAD DUP2 LT PUSH2 0x2B5 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 SWAP2 DUP3 MSTORE PUSH1 0x20 SWAP1 SWAP2 KECCAK256 PUSH1 0x3 SWAP1 SWAP2 MUL ADD DUP1 SLOAD PUSH1 0x1 DUP3 ADD DUP1 SLOAD SWAP2 SWAP4 POP SWAP1 PUSH2 0x2DA SWAP1 PUSH2 0x4A5 JUMP JUMPDEST DUP1 PUSH1 0x1F ADD PUSH1 0x20 DUP1 SWAP2 DIV MUL PUSH1 0x20 ADD PUSH1 0x40 MLOAD SWAP1 DUP2 ADD PUSH1 0x40 MSTORE DUP1 SWAP3 SWAP2 SWAP1 DUP2 DUP2 MSTORE PUSH1 0x20 ADD DUP3 DUP1 SLOAD PUSH2 0x306 SWAP1 PUSH2 0x4A5 JUMP JUMPDEST DUP1 ISZERO PUSH2 0x353 JUMPI DUP1 PUSH1 0x1F LT PUSH2 0x328 JUMPI PUSH2 0x100 DUP1 DUP4 SLOAD DIV MUL DUP4 MSTORE SWAP2 PUSH1 0x20 ADD SWAP2 PUSH2 0x353 JUMP JUMPDEST DUP3 ADD SWAP2 SWAP1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 KECCAK256 SWAP1 JUMPDEST DUP2 SLOAD DUP2 MSTORE SWAP1 PUSH1 0x1 ADD SWAP1 PUSH1 0x20 ADD DUP1 DUP4 GT PUSH2 0x336 JUMPI DUP3 SWAP1 SUB PUSH1 0x1F AND DUP3 ADD SWAP2 JUMPDEST POP POP POP POP POP SWAP1 DUP1 PUSH1 0x2 ADD SLOAD SWAP1 POP DUP4 JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH2 0x100 SWAP1 DIV PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND CALLER EQ PUSH2 0x3B7 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x12 PUSH1 0x24 DUP3 ADD MSTORE PUSH18 0x13D393164813D5D391548810D05388115391 PUSH1 0x72 SHL PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD PUSH2 0x1A8 JUMP JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0xFF NOT AND SWAP1 SSTORE JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x3D5 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD SWAP2 SWAP1 POP JUMP JUMPDEST DUP4 DUP2 MSTORE PUSH1 0x60 PUSH1 0x20 DUP3 ADD MSTORE PUSH1 0x0 DUP4 MLOAD DUP1 PUSH1 0x60 DUP5 ADD MSTORE PUSH1 0x0 JUMPDEST DUP2 DUP2 LT ISZERO PUSH2 0x410 JUMPI PUSH1 0x20 DUP2 DUP8 ADD DUP2 ADD MLOAD PUSH1 0x80 DUP7 DUP5 ADD ADD MSTORE ADD PUSH2 0x3F3 JUMP JUMPDEST POP PUSH1 0x0 PUSH1 0x80 DUP3 DUP6 ADD ADD MSTORE PUSH1 0x80 PUSH1 0x1F NOT PUSH1 0x1F DUP4 ADD AND DUP5 ADD ADD SWAP2 POP POP DUP3 PUSH1 0x40 DUP4 ADD MSTORE SWAP5 SWAP4 POP POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x44A JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP2 AND DUP2 EQ PUSH2 0x461 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH1 0x0 MSTORE PUSH1 0x32 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST PUSH1 0x0 PUSH1 0x1 DUP3 ADD PUSH2 0x49E JUMPI PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH1 0x0 MSTORE PUSH1 0x11 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST POP PUSH1 0x1 ADD SWAP1 JUMP JUMPDEST PUSH1 0x1 DUP2 DUP2 SHR SWAP1 DUP3 AND DUP1 PUSH2 0x4B9 JUMPI PUSH1 0x7F DUP3 AND SWAP2 POP JUMPDEST PUSH1 0x20 DUP3 LT DUP2 SUB PUSH2 0x4D9 JUMPI PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH1 0x0 MSTORE PUSH1 0x22 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST POP SWAP2 SWAP1 POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0x2C PUSH6 0x767AA0A5186B STOP DIV NUMBER 0xDF DUP8 0x2E 0xBD PUSH4 0x15FE422A SHR BLOBBASEFEE 0xC1 SWAP2 SWAP16 EXTCODECOPY SDIV 0x23 TLOAD CALLDATALOAD LT PUSH16 0x64736F6C634300081C00330000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x88"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "SHR",
+      "path": "0"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xA3EC138D"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x5B"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xA3EC138D"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x116"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "54": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xBB9AA28F"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x139"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "66": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xEFBE1C1C"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "72": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x14B"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "77": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xF1CEA4C7"
+    },
+    "82": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "83": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x153"
+    },
+    "86": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "87": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "89": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "90": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "91": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "92": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "93": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x121B93F"
+    },
+    "98": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "99": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x8D"
+    },
+    "102": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "103": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "104": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xA3A906C"
+    },
+    "109": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "110": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xA2"
+    },
+    "113": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "114": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "115": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x3477EE2E"
+    },
+    "120": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "121": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xC4"
+    },
+    "124": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "125": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "126": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x8DA5CB5B"
+    },
+    "131": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "132": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xE6"
+    },
+    "135": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "136": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "137": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "139": {
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "140": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        65,
+        1647
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "141": {
+      "fn": "Election.vote",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "142": {
+      "fn": "Election.vote",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xA0"
+    },
+    "145": {
+      "fn": "Election.vote",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x9B"
+    },
+    "148": {
+      "fn": "Election.vote",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "149": {
+      "fn": "Election.vote",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "151": {
+      "fn": "Election.vote",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3C3"
+    },
+    "154": {
+      "fn": "Election.vote",
+      "jump": "i",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "155": {
+      "fn": "Election.vote",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "156": {
+      "fn": "Election.vote",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x15C"
+    },
+    "159": {
+      "fn": "Election.vote",
+      "jump": "i",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "160": {
+      "fn": "Election.vote",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "161": {
+      "fn": "Election.vote",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "162": {
+      "offset": [
+        182,
+        208
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "163": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "165": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "166": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xAF"
+    },
+    "169": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "170": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "172": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "173": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "174": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "175": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "176": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "178": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "179": {
+      "op": "SWAP1"
+    },
+    "180": {
+      "op": "ISZERO"
+    },
+    "181": {
+      "op": "ISZERO"
+    },
+    "182": {
+      "op": "DUP2"
+    },
+    "183": {
+      "op": "MSTORE"
+    },
+    "184": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "186": {
+      "op": "ADD"
+    },
+    "187": {
+      "offset": [
+        182,
+        208
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "188": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "190": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "191": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "192": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "193": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "194": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "195": {
+      "fn": "Election.vote",
+      "offset": [
+        182,
+        208
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "196": {
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "197": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xD7"
+    },
+    "200": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xD2"
+    },
+    "203": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "204": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "206": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3C3"
+    },
+    "209": {
+      "fn": "Election.vote",
+      "jump": "i",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "210": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "211": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x2A5"
+    },
+    "214": {
+      "fn": "Election.vote",
+      "jump": "i",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "215": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "216": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "218": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "219": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xBB"
+    },
+    "222": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "223": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "224": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "225": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "226": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3DC"
+    },
+    "229": {
+      "fn": "Election.vote",
+      "jump": "i",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "230": {
+      "offset": [
+        269,
+        289
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "231": {
+      "fn": "Election.vote",
+      "offset": [
+        269,
+        289
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "233": {
+      "fn": "Election.vote",
+      "offset": [
+        269,
+        289
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "234": {
+      "fn": "Election.vote",
+      "offset": [
+        269,
+        289
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xFE"
+    },
+    "237": {
+      "fn": "Election.vote",
+      "offset": [
+        269,
+        289
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "238": {
+      "fn": "Election.vote",
+      "offset": [
+        269,
+        289
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x100"
+    },
+    "241": {
+      "fn": "Election.vote",
+      "offset": [
+        269,
+        289
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "242": {
+      "fn": "Election.vote",
+      "offset": [
+        269,
+        289
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "243": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "245": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "247": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "249": {
+      "op": "SHL"
+    },
+    "250": {
+      "op": "SUB"
+    },
+    "251": {
+      "offset": [
+        269,
+        289
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "252": {
+      "fn": "Election.vote",
+      "offset": [
+        269,
+        289
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "253": {
+      "fn": "Election.vote",
+      "offset": [
+        269,
+        289
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "254": {
+      "fn": "Election.vote",
+      "offset": [
+        269,
+        289
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "255": {
+      "fn": "Election.vote",
+      "offset": [
+        269,
+        289
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "257": {
+      "fn": "Election.vote",
+      "offset": [
+        269,
+        289
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "258": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "260": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "262": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "264": {
+      "op": "SHL"
+    },
+    "265": {
+      "op": "SUB"
+    },
+    "266": {
+      "op": "SWAP1"
+    },
+    "267": {
+      "op": "SWAP2"
+    },
+    "268": {
+      "op": "AND"
+    },
+    "269": {
+      "op": "DUP2"
+    },
+    "270": {
+      "op": "MSTORE"
+    },
+    "271": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "273": {
+      "op": "ADD"
+    },
+    "274": {
+      "offset": [
+        269,
+        289
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xBB"
+    },
+    "277": {
+      "op": "JUMP"
+    },
+    "278": {
+      "offset": [
+        296,
+        334
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "279": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xAF"
+    },
+    "282": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x124"
+    },
+    "285": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "286": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "288": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x438"
+    },
+    "291": {
+      "fn": "Election.vote",
+      "jump": "i",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "292": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "293": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "295": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "297": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "298": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "300": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "301": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "302": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "303": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "305": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "306": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "307": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "308": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "310": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "311": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "312": {
+      "fn": "Election.vote",
+      "offset": [
+        296,
+        334
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "313": {
+      "fn": "Election.getCandidatesCount",
+      "offset": [
+        1547,
+        1645
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "314": {
+      "fn": "Election.getCandidatesCount",
+      "offset": [
+        1621,
+        1631
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 0,
+      "value": "0x2"
+    },
+    "316": {
+      "fn": "Election.getCandidatesCount",
+      "offset": [
+        1621,
+        1638
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "317": {
+      "fn": "Election.getCandidatesCount",
+      "offset": [
+        1547,
+        1645
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "318": {
+      "fn": "Election.getCandidatesCount",
+      "offset": [
+        1547,
+        1645
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "320": {
+      "fn": "Election.getCandidatesCount",
+      "offset": [
+        1547,
+        1645
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "321": {
+      "op": "SWAP1"
+    },
+    "322": {
+      "op": "DUP2"
+    },
+    "323": {
+      "op": "MSTORE"
+    },
+    "324": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "326": {
+      "op": "ADD"
+    },
+    "327": {
+      "fn": "Election.getCandidatesCount",
+      "offset": [
+        1547,
+        1645
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xBB"
+    },
+    "330": {
+      "op": "JUMP"
+    },
+    "331": {
+      "fn": "Election.end",
+      "offset": [
+        859,
+        975
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "332": {
+      "fn": "Election.end",
+      "offset": [
+        859,
+        975
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xA0"
+    },
+    "335": {
+      "fn": "Election.end",
+      "offset": [
+        859,
+        975
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x363"
+    },
+    "338": {
+      "fn": "Election.end",
+      "jump": "i",
+      "offset": [
+        859,
+        975
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "339": {
+      "offset": [
+        550,
+        575
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "340": {
+      "fn": "Election.end",
+      "offset": [
+        550,
+        575
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x13D"
+    },
+    "343": {
+      "fn": "Election.end",
+      "offset": [
+        550,
+        575
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3"
+    },
+    "345": {
+      "fn": "Election.end",
+      "offset": [
+        550,
+        575
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "346": {
+      "fn": "Election.end",
+      "offset": [
+        550,
+        575
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "347": {
+      "fn": "Election.end",
+      "offset": [
+        550,
+        575
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "348": {
+      "fn": "Election.vote",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "349": {
+      "fn": "Election.vote",
+      "offset": [
+        1124,
+        1134
+      ],
+      "op": "CALLER",
+      "path": "0",
+      "statement": 1
+    },
+    "350": {
+      "fn": "Election.vote",
+      "offset": [
+        1117,
+        1135
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "352": {
+      "fn": "Election.vote",
+      "offset": [
+        1117,
+        1135
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "353": {
+      "fn": "Election.vote",
+      "offset": [
+        1117,
+        1135
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "354": {
+      "fn": "Election.vote",
+      "offset": [
+        1117,
+        1135
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "355": {
+      "fn": "Election.vote",
+      "offset": [
+        1117,
+        1123
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "357": {
+      "fn": "Election.vote",
+      "offset": [
+        1117,
+        1135
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "359": {
+      "fn": "Election.vote",
+      "offset": [
+        1117,
+        1135
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "360": {
+      "fn": "Election.vote",
+      "offset": [
+        1117,
+        1135
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "362": {
+      "fn": "Election.vote",
+      "offset": [
+        1117,
+        1135
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "363": {
+      "fn": "Election.vote",
+      "offset": [
+        1117,
+        1135
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "364": {
+      "fn": "Election.vote",
+      "offset": [
+        1117,
+        1135
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "365": {
+      "fn": "Election.vote",
+      "offset": [
+        1117,
+        1135
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "367": {
+      "fn": "Election.vote",
+      "offset": [
+        1117,
+        1135
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "368": {
+      "branch": 9,
+      "fn": "Election.vote",
+      "offset": [
+        1116,
+        1135
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "369": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1B1"
+    },
+    "372": {
+      "branch": 9,
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "373": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "375": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "376": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "380": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "382": {
+      "op": "SHL"
+    },
+    "383": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "384": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "385": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "387": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "389": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "390": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "391": {
+      "op": "MSTORE"
+    },
+    "392": {
+      "op": "PUSH1",
+      "value": "0xD"
+    },
+    "394": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "396": {
+      "op": "DUP3"
+    },
+    "397": {
+      "op": "ADD"
+    },
+    "398": {
+      "op": "MSTORE"
+    },
+    "399": {
+      "op": "PUSH13",
+      "value": "0x105B1C9958591E481D9BDD1959"
+    },
+    "413": {
+      "op": "PUSH1",
+      "value": "0x9A"
+    },
+    "415": {
+      "op": "SHL"
+    },
+    "416": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "418": {
+      "op": "DUP3"
+    },
+    "419": {
+      "op": "ADD"
+    },
+    "420": {
+      "op": "MSTORE"
+    },
+    "421": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "423": {
+      "op": "ADD"
+    },
+    "424": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "425": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "427": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "428": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "429": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "430": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "431": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "432": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "REVERT",
+      "optimizer_revert": true,
+      "path": "0"
+    },
+    "433": {
+      "fn": "Election.vote",
+      "offset": [
+        1108,
+        1153
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "434": {
+      "fn": "Election.vote",
+      "offset": [
+        1284,
+        1294
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 2,
+      "value": "0x2"
+    },
+    "436": {
+      "fn": "Election.vote",
+      "offset": [
+        1284,
+        1301
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "437": {
+      "fn": "Election.vote",
+      "offset": [
+        1269,
+        1301
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "438": {
+      "branch": 10,
+      "fn": "Election.vote",
+      "offset": [
+        1269,
+        1301
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "439": {
+      "fn": "Election.vote",
+      "offset": [
+        1261,
+        1323
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1F6"
+    },
+    "442": {
+      "branch": 10,
+      "fn": "Election.vote",
+      "offset": [
+        1261,
+        1323
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "443": {
+      "fn": "Election.vote",
+      "offset": [
+        1261,
+        1323
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "445": {
+      "fn": "Election.vote",
+      "offset": [
+        1261,
+        1323
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "446": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "450": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "452": {
+      "op": "SHL"
+    },
+    "453": {
+      "fn": "Election.vote",
+      "offset": [
+        1261,
+        1323
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "454": {
+      "fn": "Election.vote",
+      "offset": [
+        1261,
+        1323
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "455": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "457": {
+      "fn": "Election.vote",
+      "offset": [
+        1261,
+        1323
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "459": {
+      "fn": "Election.vote",
+      "offset": [
+        1261,
+        1323
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "460": {
+      "fn": "Election.vote",
+      "offset": [
+        1261,
+        1323
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "461": {
+      "op": "MSTORE"
+    },
+    "462": {
+      "op": "PUSH1",
+      "value": "0x11"
+    },
+    "464": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "466": {
+      "op": "DUP3"
+    },
+    "467": {
+      "op": "ADD"
+    },
+    "468": {
+      "op": "MSTORE"
+    },
+    "469": {
+      "op": "PUSH17",
+      "value": "0x496E76616C69642063616E646964617465"
+    },
+    "487": {
+      "op": "PUSH1",
+      "value": "0x78"
+    },
+    "489": {
+      "op": "SHL"
+    },
+    "490": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "492": {
+      "op": "DUP3"
+    },
+    "493": {
+      "op": "ADD"
+    },
+    "494": {
+      "op": "MSTORE"
+    },
+    "495": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "497": {
+      "op": "ADD"
+    },
+    "498": {
+      "fn": "Election.vote",
+      "offset": [
+        1261,
+        1323
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1A8"
+    },
+    "501": {
+      "op": "JUMP"
+    },
+    "502": {
+      "fn": "Election.vote",
+      "offset": [
+        1261,
+        1323
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "503": {
+      "fn": "Election.vote",
+      "offset": [
+        1342,
+        1349
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 3,
+      "value": "0x0"
+    },
+    "505": {
+      "fn": "Election.vote",
+      "offset": [
+        1342,
+        1349
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "506": {
+      "fn": "Election.vote",
+      "offset": [
+        1342,
+        1349
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "508": {
+      "branch": 11,
+      "fn": "Election.vote",
+      "offset": [
+        1342,
+        1349
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "509": {
+      "fn": "Election.vote",
+      "offset": [
+        1334,
+        1368
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x239"
+    },
+    "512": {
+      "branch": 11,
+      "fn": "Election.vote",
+      "offset": [
+        1334,
+        1368
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "513": {
+      "fn": "Election.vote",
+      "offset": [
+        1334,
+        1368
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "515": {
+      "fn": "Election.vote",
+      "offset": [
+        1334,
+        1368
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "516": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "520": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "522": {
+      "op": "SHL"
+    },
+    "523": {
+      "fn": "Election.vote",
+      "offset": [
+        1334,
+        1368
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "524": {
+      "fn": "Election.vote",
+      "offset": [
+        1334,
+        1368
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "525": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "527": {
+      "fn": "Election.vote",
+      "offset": [
+        1334,
+        1368
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "529": {
+      "fn": "Election.vote",
+      "offset": [
+        1334,
+        1368
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "530": {
+      "fn": "Election.vote",
+      "offset": [
+        1334,
+        1368
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "531": {
+      "op": "MSTORE"
+    },
+    "532": {
+      "op": "PUSH1",
+      "value": "0xE"
+    },
+    "534": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "536": {
+      "op": "DUP3"
+    },
+    "537": {
+      "op": "ADD"
+    },
+    "538": {
+      "op": "MSTORE"
+    },
+    "539": {
+      "op": "PUSH14",
+      "value": "0x115B1958DD1A5BDB88195B991959"
+    },
+    "554": {
+      "op": "PUSH1",
+      "value": "0x92"
+    },
+    "556": {
+      "op": "SHL"
+    },
+    "557": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "559": {
+      "op": "DUP3"
+    },
+    "560": {
+      "op": "ADD"
+    },
+    "561": {
+      "op": "MSTORE"
+    },
+    "562": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "564": {
+      "op": "ADD"
+    },
+    "565": {
+      "fn": "Election.vote",
+      "offset": [
+        1334,
+        1368
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1A8"
+    },
+    "568": {
+      "op": "JUMP"
+    },
+    "569": {
+      "fn": "Election.vote",
+      "offset": [
+        1334,
+        1368
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "570": {
+      "fn": "Election.vote",
+      "offset": [
+        1386,
+        1396
+      ],
+      "op": "CALLER",
+      "path": "0",
+      "statement": 4
+    },
+    "571": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1397
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "573": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1397
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "574": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1397
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "575": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1397
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "576": {
+      "fn": "Election.vote",
+      "offset": [
+        1400,
+        1404
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "578": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1397
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "580": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1397
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "581": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1397
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "582": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1397
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "583": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1397
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "585": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1397
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "586": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1397
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "587": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1397
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "588": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1404
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "589": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1404
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "590": {
+      "op": "PUSH1",
+      "value": "0xFF"
+    },
+    "592": {
+      "op": "NOT"
+    },
+    "593": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1404
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "594": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1404
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "595": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1404
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "596": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1404
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "597": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1404
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "598": {
+      "fn": "Election.vote",
+      "offset": [
+        1379,
+        1404
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "599": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1425
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 5,
+      "value": "0x2"
+    },
+    "601": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "602": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "603": {
+      "fn": "Election.vote",
+      "offset": [
+        1426,
+        1438
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "604": {
+      "fn": "Election.vote",
+      "offset": [
+        1426,
+        1438
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "605": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "606": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "607": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x26A"
+    },
+    "610": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "611": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x26A"
+    },
+    "614": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x468"
+    },
+    "617": {
+      "fn": "Election.vote",
+      "jump": "i",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "618": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "619": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "621": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "622": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "623": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "624": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "626": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "627": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "628": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1449
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "630": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3"
+    },
+    "632": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "633": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "634": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "635": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1439
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "636": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1449
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "637": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1451
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "638": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1451
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "639": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1451
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "640": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1451
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x288"
+    },
+    "643": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1451
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "644": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1451
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x47E"
+    },
+    "647": {
+      "fn": "Election.vote",
+      "jump": "i",
+      "offset": [
+        1415,
+        1451
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "648": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1451
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "649": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1451
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "650": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1451
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "651": {
+      "fn": "Election.vote",
+      "offset": [
+        1415,
+        1451
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "652": {
+      "op": "POP"
+    },
+    "653": {
+      "op": "POP"
+    },
+    "654": {
+      "fn": "Election.vote",
+      "offset": [
+        1461,
+        1470
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 6,
+      "value": "0x3"
+    },
+    "656": {
+      "fn": "Election.vote",
+      "offset": [
+        1461,
+        1472
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "657": {
+      "fn": "Election.vote",
+      "offset": [
+        1461,
+        1472
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "658": {
+      "fn": "Election.vote",
+      "offset": [
+        1461,
+        1472
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "659": {
+      "fn": "Election.vote",
+      "offset": [
+        1461,
+        1470
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "661": {
+      "fn": "Election.vote",
+      "offset": [
+        1461,
+        1472
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x29D"
+    },
+    "664": {
+      "fn": "Election.vote",
+      "offset": [
+        1461,
+        1472
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "665": {
+      "fn": "Election.vote",
+      "offset": [
+        1461,
+        1472
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x47E"
+    },
+    "668": {
+      "fn": "Election.vote",
+      "jump": "i",
+      "offset": [
+        1461,
+        1472
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "669": {
+      "fn": "Election.vote",
+      "offset": [
+        1461,
+        1472
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "670": {
+      "fn": "Election.vote",
+      "offset": [
+        1461,
+        1472
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "671": {
+      "fn": "Election.vote",
+      "offset": [
+        1461,
+        1472
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "672": {
+      "fn": "Election.vote",
+      "offset": [
+        1461,
+        1472
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "673": {
+      "fn": "Election.vote",
+      "offset": [
+        1461,
+        1472
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "674": {
+      "fn": "Election.vote",
+      "offset": [
+        1461,
+        1472
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "675": {
+      "fn": "Election.vote",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "676": {
+      "fn": "Election.vote",
+      "jump": "o",
+      "offset": [
+        1057,
+        1479
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "677": {
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "678": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "680": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "681": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "682": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "683": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "684": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "685": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x2B5"
+    },
+    "688": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "689": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "691": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "692": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "693": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "694": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "696": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "697": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "698": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "699": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "701": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "702": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "703": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "704": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3"
+    },
+    "706": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "707": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "708": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "709": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "710": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "711": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "712": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "714": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "715": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "716": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "717": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "718": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "719": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "720": {
+      "op": "POP"
+    },
+    "721": {
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "722": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x2DA"
+    },
+    "725": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "726": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4A5"
+    },
+    "729": {
+      "fn": "Election.vote",
+      "jump": "i",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "730": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "731": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "732": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1F"
+    },
+    "734": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "735": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "737": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "738": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "739": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "740": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "741": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "743": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "744": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "746": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "747": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "748": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "749": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "750": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "752": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "753": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "754": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "755": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "756": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "757": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "758": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "759": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "760": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "762": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "763": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "764": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "765": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "766": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x306"
+    },
+    "769": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "770": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4A5"
+    },
+    "773": {
+      "fn": "Election.vote",
+      "jump": "i",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "774": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "775": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "776": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "777": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x353"
+    },
+    "780": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "781": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "782": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1F"
+    },
+    "784": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "785": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x328"
+    },
+    "788": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "789": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x100"
+    },
+    "792": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "793": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "794": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "795": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "796": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "797": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "798": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "799": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "800": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "802": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "803": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "804": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x353"
+    },
+    "807": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "808": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "809": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "810": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "811": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "812": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "813": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "815": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "816": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "818": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "820": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "821": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "822": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "823": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "824": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "825": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "826": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "827": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "828": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "830": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "831": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "832": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "834": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "835": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "836": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "837": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "838": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x336"
+    },
+    "841": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "842": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "843": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "844": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "845": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1F"
+    },
+    "847": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "848": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "849": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "850": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "851": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "852": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "853": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "854": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "855": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "856": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "857": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "858": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "859": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "861": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "862": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "863": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "864": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "865": {
+      "fn": "Election.vote",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "866": {
+      "fn": "Election.vote",
+      "jump": "o",
+      "offset": [
+        417,
+        446
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "867": {
+      "fn": "Election.end",
+      "offset": [
+        859,
+        975
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "868": {
+      "fn": "Election.end",
+      "offset": [
+        914,
+        919
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 7,
+      "value": "0x0"
+    },
+    "870": {
+      "fn": "Election.end",
+      "offset": [
+        914,
+        919
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "871": {
+      "fn": "Election.end",
+      "offset": [
+        914,
+        919
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x100"
+    },
+    "874": {
+      "fn": "Election.end",
+      "offset": [
+        914,
+        919
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "875": {
+      "fn": "Election.end",
+      "offset": [
+        914,
+        919
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "876": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "878": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "880": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "882": {
+      "op": "SHL"
+    },
+    "883": {
+      "op": "SUB"
+    },
+    "884": {
+      "fn": "Election.end",
+      "offset": [
+        914,
+        919
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "885": {
+      "fn": "Election.end",
+      "offset": [
+        900,
+        910
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "886": {
+      "branch": 12,
+      "fn": "Election.end",
+      "offset": [
+        900,
+        919
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "887": {
+      "fn": "Election.end",
+      "offset": [
+        892,
+        943
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3B7"
+    },
+    "890": {
+      "branch": 12,
+      "fn": "Election.end",
+      "offset": [
+        892,
+        943
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "891": {
+      "fn": "Election.end",
+      "offset": [
+        892,
+        943
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "893": {
+      "fn": "Election.end",
+      "offset": [
+        892,
+        943
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "894": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "898": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "900": {
+      "op": "SHL"
+    },
+    "901": {
+      "fn": "Election.end",
+      "offset": [
+        892,
+        943
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "902": {
+      "fn": "Election.end",
+      "offset": [
+        892,
+        943
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "903": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "905": {
+      "fn": "Election.end",
+      "offset": [
+        892,
+        943
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "907": {
+      "fn": "Election.end",
+      "offset": [
+        892,
+        943
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "908": {
+      "fn": "Election.end",
+      "offset": [
+        892,
+        943
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "909": {
+      "op": "MSTORE"
+    },
+    "910": {
+      "op": "PUSH1",
+      "value": "0x12"
+    },
+    "912": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "914": {
+      "op": "DUP3"
+    },
+    "915": {
+      "op": "ADD"
+    },
+    "916": {
+      "op": "MSTORE"
+    },
+    "917": {
+      "op": "PUSH18",
+      "value": "0x13D393164813D5D391548810D05388115391"
+    },
+    "936": {
+      "op": "PUSH1",
+      "value": "0x72"
+    },
+    "938": {
+      "op": "SHL"
+    },
+    "939": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "941": {
+      "op": "DUP3"
+    },
+    "942": {
+      "op": "ADD"
+    },
+    "943": {
+      "op": "MSTORE"
+    },
+    "944": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "946": {
+      "op": "ADD"
+    },
+    "947": {
+      "fn": "Election.end",
+      "offset": [
+        892,
+        943
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1A8"
+    },
+    "950": {
+      "op": "JUMP"
+    },
+    "951": {
+      "fn": "Election.end",
+      "offset": [
+        892,
+        943
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "952": {
+      "fn": "Election.end",
+      "offset": [
+        963,
+        968
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 8,
+      "value": "0x0"
+    },
+    "954": {
+      "fn": "Election.end",
+      "offset": [
+        953,
+        968
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "955": {
+      "fn": "Election.end",
+      "offset": [
+        953,
+        968
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "956": {
+      "op": "PUSH1",
+      "value": "0xFF"
+    },
+    "958": {
+      "op": "NOT"
+    },
+    "959": {
+      "fn": "Election.end",
+      "offset": [
+        953,
+        968
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "960": {
+      "fn": "Election.end",
+      "offset": [
+        953,
+        968
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "961": {
+      "fn": "Election.end",
+      "offset": [
+        953,
+        968
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "962": {
+      "fn": "Election.end",
+      "jump": "o",
+      "offset": [
+        859,
+        975
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "963": {
+      "op": "JUMPDEST"
+    },
+    "964": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "966": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "968": {
+      "op": "DUP3"
+    },
+    "969": {
+      "op": "DUP5"
+    },
+    "970": {
+      "op": "SUB"
+    },
+    "971": {
+      "op": "SLT"
+    },
+    "972": {
+      "op": "ISZERO"
+    },
+    "973": {
+      "op": "PUSH2",
+      "value": "0x3D5"
+    },
+    "976": {
+      "op": "JUMPI"
+    },
+    "977": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "979": {
+      "op": "DUP1"
+    },
+    "980": {
+      "op": "REVERT"
+    },
+    "981": {
+      "op": "JUMPDEST"
+    },
+    "982": {
+      "op": "POP"
+    },
+    "983": {
+      "op": "CALLDATALOAD"
+    },
+    "984": {
+      "op": "SWAP2"
+    },
+    "985": {
+      "op": "SWAP1"
+    },
+    "986": {
+      "op": "POP"
+    },
+    "987": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "988": {
+      "op": "JUMPDEST"
+    },
+    "989": {
+      "op": "DUP4"
+    },
+    "990": {
+      "op": "DUP2"
+    },
+    "991": {
+      "op": "MSTORE"
+    },
+    "992": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "994": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "996": {
+      "op": "DUP3"
+    },
+    "997": {
+      "op": "ADD"
+    },
+    "998": {
+      "op": "MSTORE"
+    },
+    "999": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1001": {
+      "op": "DUP4"
+    },
+    "1002": {
+      "op": "MLOAD"
+    },
+    "1003": {
+      "op": "DUP1"
+    },
+    "1004": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "1006": {
+      "op": "DUP5"
+    },
+    "1007": {
+      "op": "ADD"
+    },
+    "1008": {
+      "op": "MSTORE"
+    },
+    "1009": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1011": {
+      "op": "JUMPDEST"
+    },
+    "1012": {
+      "op": "DUP2"
+    },
+    "1013": {
+      "op": "DUP2"
+    },
+    "1014": {
+      "op": "LT"
+    },
+    "1015": {
+      "op": "ISZERO"
+    },
+    "1016": {
+      "op": "PUSH2",
+      "value": "0x410"
+    },
+    "1019": {
+      "op": "JUMPI"
+    },
+    "1020": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1022": {
+      "op": "DUP2"
+    },
+    "1023": {
+      "op": "DUP8"
+    },
+    "1024": {
+      "op": "ADD"
+    },
+    "1025": {
+      "op": "DUP2"
+    },
+    "1026": {
+      "op": "ADD"
+    },
+    "1027": {
+      "op": "MLOAD"
+    },
+    "1028": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "1030": {
+      "op": "DUP7"
+    },
+    "1031": {
+      "op": "DUP5"
+    },
+    "1032": {
+      "op": "ADD"
+    },
+    "1033": {
+      "op": "ADD"
+    },
+    "1034": {
+      "op": "MSTORE"
+    },
+    "1035": {
+      "op": "ADD"
+    },
+    "1036": {
+      "op": "PUSH2",
+      "value": "0x3F3"
+    },
+    "1039": {
+      "op": "JUMP"
+    },
+    "1040": {
+      "op": "JUMPDEST"
+    },
+    "1041": {
+      "op": "POP"
+    },
+    "1042": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1044": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "1046": {
+      "op": "DUP3"
+    },
+    "1047": {
+      "op": "DUP6"
+    },
+    "1048": {
+      "op": "ADD"
+    },
+    "1049": {
+      "op": "ADD"
+    },
+    "1050": {
+      "op": "MSTORE"
+    },
+    "1051": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "1053": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1055": {
+      "op": "NOT"
+    },
+    "1056": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1058": {
+      "op": "DUP4"
+    },
+    "1059": {
+      "op": "ADD"
+    },
+    "1060": {
+      "op": "AND"
+    },
+    "1061": {
+      "op": "DUP5"
+    },
+    "1062": {
+      "op": "ADD"
+    },
+    "1063": {
+      "op": "ADD"
+    },
+    "1064": {
+      "op": "SWAP2"
+    },
+    "1065": {
+      "op": "POP"
+    },
+    "1066": {
+      "op": "POP"
+    },
+    "1067": {
+      "op": "DUP3"
+    },
+    "1068": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "1070": {
+      "op": "DUP4"
+    },
+    "1071": {
+      "op": "ADD"
+    },
+    "1072": {
+      "op": "MSTORE"
+    },
+    "1073": {
+      "op": "SWAP5"
+    },
+    "1074": {
+      "op": "SWAP4"
+    },
+    "1075": {
+      "op": "POP"
+    },
+    "1076": {
+      "op": "POP"
+    },
+    "1077": {
+      "op": "POP"
+    },
+    "1078": {
+      "op": "POP"
+    },
+    "1079": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1080": {
+      "op": "JUMPDEST"
+    },
+    "1081": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1083": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1085": {
+      "op": "DUP3"
+    },
+    "1086": {
+      "op": "DUP5"
+    },
+    "1087": {
+      "op": "SUB"
+    },
+    "1088": {
+      "op": "SLT"
+    },
+    "1089": {
+      "op": "ISZERO"
+    },
+    "1090": {
+      "op": "PUSH2",
+      "value": "0x44A"
+    },
+    "1093": {
+      "op": "JUMPI"
+    },
+    "1094": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1096": {
+      "op": "DUP1"
+    },
+    "1097": {
+      "op": "REVERT"
+    },
+    "1098": {
+      "op": "JUMPDEST"
+    },
+    "1099": {
+      "op": "DUP2"
+    },
+    "1100": {
+      "op": "CALLDATALOAD"
+    },
+    "1101": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1103": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1105": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "1107": {
+      "op": "SHL"
+    },
+    "1108": {
+      "op": "SUB"
+    },
+    "1109": {
+      "op": "DUP2"
+    },
+    "1110": {
+      "op": "AND"
+    },
+    "1111": {
+      "op": "DUP2"
+    },
+    "1112": {
+      "op": "EQ"
+    },
+    "1113": {
+      "op": "PUSH2",
+      "value": "0x461"
+    },
+    "1116": {
+      "op": "JUMPI"
+    },
+    "1117": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1119": {
+      "op": "DUP1"
+    },
+    "1120": {
+      "op": "REVERT"
+    },
+    "1121": {
+      "op": "JUMPDEST"
+    },
+    "1122": {
+      "op": "SWAP4"
+    },
+    "1123": {
+      "op": "SWAP3"
+    },
+    "1124": {
+      "op": "POP"
+    },
+    "1125": {
+      "op": "POP"
+    },
+    "1126": {
+      "op": "POP"
+    },
+    "1127": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1128": {
+      "op": "JUMPDEST"
+    },
+    "1129": {
+      "op": "PUSH4",
+      "value": "0x4E487B71"
+    },
+    "1134": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "1136": {
+      "op": "SHL"
+    },
+    "1137": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1139": {
+      "op": "MSTORE"
+    },
+    "1140": {
+      "op": "PUSH1",
+      "value": "0x32"
+    },
+    "1142": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "1144": {
+      "op": "MSTORE"
+    },
+    "1145": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "1147": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1149": {
+      "op": "REVERT"
+    },
+    "1150": {
+      "op": "JUMPDEST"
+    },
+    "1151": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1153": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1155": {
+      "op": "DUP3"
+    },
+    "1156": {
+      "op": "ADD"
+    },
+    "1157": {
+      "op": "PUSH2",
+      "value": "0x49E"
+    },
+    "1160": {
+      "op": "JUMPI"
+    },
+    "1161": {
+      "op": "PUSH4",
+      "value": "0x4E487B71"
+    },
+    "1166": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "1168": {
+      "op": "SHL"
+    },
+    "1169": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1171": {
+      "op": "MSTORE"
+    },
+    "1172": {
+      "op": "PUSH1",
+      "value": "0x11"
+    },
+    "1174": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "1176": {
+      "op": "MSTORE"
+    },
+    "1177": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "1179": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1181": {
+      "op": "REVERT"
+    },
+    "1182": {
+      "op": "JUMPDEST"
+    },
+    "1183": {
+      "op": "POP"
+    },
+    "1184": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1186": {
+      "op": "ADD"
+    },
+    "1187": {
+      "op": "SWAP1"
+    },
+    "1188": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1189": {
+      "op": "JUMPDEST"
+    },
+    "1190": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1192": {
+      "op": "DUP2"
+    },
+    "1193": {
+      "op": "DUP2"
+    },
+    "1194": {
+      "op": "SHR"
+    },
+    "1195": {
+      "op": "SWAP1"
+    },
+    "1196": {
+      "op": "DUP3"
+    },
+    "1197": {
+      "op": "AND"
+    },
+    "1198": {
+      "op": "DUP1"
+    },
+    "1199": {
+      "op": "PUSH2",
+      "value": "0x4B9"
+    },
+    "1202": {
+      "op": "JUMPI"
+    },
+    "1203": {
+      "op": "PUSH1",
+      "value": "0x7F"
+    },
+    "1205": {
+      "op": "DUP3"
+    },
+    "1206": {
+      "op": "AND"
+    },
+    "1207": {
+      "op": "SWAP2"
+    },
+    "1208": {
+      "op": "POP"
+    },
+    "1209": {
+      "op": "JUMPDEST"
+    },
+    "1210": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1212": {
+      "op": "DUP3"
+    },
+    "1213": {
+      "op": "LT"
+    },
+    "1214": {
+      "op": "DUP2"
+    },
+    "1215": {
+      "op": "SUB"
+    },
+    "1216": {
+      "op": "PUSH2",
+      "value": "0x4D9"
+    },
+    "1219": {
+      "op": "JUMPI"
+    },
+    "1220": {
+      "op": "PUSH4",
+      "value": "0x4E487B71"
+    },
+    "1225": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "1227": {
+      "op": "SHL"
+    },
+    "1228": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1230": {
+      "op": "MSTORE"
+    },
+    "1231": {
+      "op": "PUSH1",
+      "value": "0x22"
+    },
+    "1233": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "1235": {
+      "op": "MSTORE"
+    },
+    "1236": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "1238": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1240": {
+      "op": "REVERT"
+    },
+    "1241": {
+      "op": "JUMPDEST"
+    },
+    "1242": {
+      "op": "POP"
+    },
+    "1243": {
+      "op": "SWAP2"
+    },
+    "1244": {
+      "op": "SWAP1"
+    },
+    "1245": {
+      "op": "POP"
+    },
+    "1246": {
+      "jump": "o",
+      "op": "JUMP"
+    }
+  },
+  "sha1": "0354929b7df28850422cd993d3dc432a17c93019",
+  "source": "//SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract Election {\n\n    struct Candidate {\n        uint id;\n        string name;\n        uint voteCount;\n    }\n\n    bool public goingon = true; // Th\u00eam public \u0111\u1ec3 d\u1ec5 ki\u1ec3m tra t\u1eeb b\u00ean ngo\u00e0i\n    address public owner;\n\n    mapping(address => bool) public voters;\n    // \u0110\u00e2y l\u00e0 m\u1ed9t m\u1ea3ng \u0111\u1ed9ng (dynamic array), kh\u00f4ng ph\u1ea3i mapping\n    Candidate[] public candidates; \n    \n    // kh\u00f4ng c\u1ea7n bi\u1ebfn candidatesCount n\u1eefa, v\u00ec m\u1ea3ng \u0111\u00e3 c\u00f3 thu\u1ed9c t\u00ednh .length\n    uint public totalVote = 0;\n\nconstructor () {\n    owner = msg.sender;\n    candidates.push(Candidate(0, \"De 1\", 0));\n    candidates.push(Candidate(1, \"De 2\", 0));\n    candidates.push(Candidate(2, \"De 3\", 0));\n}\n\n    // Kh\u00f4ng c\u1ea7n h\u00e0m addCandidate ri\u00eang n\u1eefa n\u1ebfu ch\u1ec9 kh\u1edfi t\u1ea1o trong constructor\n\n    function end () public {\n        require(msg.sender == owner , \"ONLY OWNER CAN END\");\n        goingon = false;\n    }\n\n    // _candidateId b\u00e2y gi\u1edd l\u00e0 ch\u1ec9 s\u1ed1 c\u1ee7a m\u1ea3ng (0, 1, ho\u1eb7c 2)\n    function vote (uint _candidateId) public {\n        require(!voters[msg.sender], \"Already voted\");\n\n        // Ki\u1ec3m tra xem ch\u1ec9 s\u1ed1 c\u00f3 h\u1ee3p l\u1ec7 kh\u00f4ng (ph\u1ea3i nh\u1ecf h\u01a1n \u0111\u1ed9 d\u00e0i m\u1ea3ng)\n        require(_candidateId < candidates.length, \"Invalid candidate\");\n\n        require(goingon, \"Election ended\");\n\n        voters[msg.sender] = true;\n\n        candidates[_candidateId].voteCount++;\n        totalVote++;\n    }\n\n    // H\u00e0m ti\u1ec7n \u00edch \u0111\u1ec3 l\u1ea5y s\u1ed1 l\u01b0\u1ee3ng \u1ee9ng vi\u00ean\n    function getCandidatesCount() public view returns (uint) {\n        return candidates.length;\n    }\n}",
+  "sourceMap": "65:1582:0:-:0;;;182:26;;;-1:-1:-1;;182:26:0;204:4;182:26;;;550:25;;578:180;;;;;;;;;-1:-1:-1;599:5:0;:18;;-1:-1:-1;;;;;;599:18:0;607:10;599:18;;;;;639:23;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;639:23:0;;;;;;;;;;;;;;;;;;;623:10;:40;;-1:-1:-1;623:40:0;;;;;;;;-1:-1:-1;;;;;;;;;;;623:40:0;;;;;;;;;;;;639:23;;-1:-1:-1;;;;;;;;;;;623:40:0;;;;;;:::i;:::-;-1:-1:-1;623:40:0;;;;;;;;;;685:23;;;;;;;695:1;685:23;;;;;;;;;;;;;-1:-1:-1;;;685:23:0;;;;;;;;;;;;;-1:-1:-1;685:23:0;;;;;;669:40;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;669:40:0;;;;;;;685:23;;669:40;-1:-1:-1;;;;;;;;;;;669:40:0;;;;;;:::i;:::-;-1:-1:-1;669:40:0;;;;;;;;;;731:23;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;731:23:0;;;;;;;;;;;;;-1:-1:-1;731:23:0;;;;;;715:40;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;715:40:0;;;;;;;731:23;;-1:-1:-1;;;;;;;;;;;715:40:0;;;;;;:::i;:::-;;;;;;;;;;;;65:1582;;14:127:3;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:380;225:1;221:12;;;;268;;;289:61;;343:4;335:6;331:17;321:27;;289:61;396:2;388:6;385:14;365:18;362:38;359:161;;442:10;437:3;433:20;430:1;423:31;477:4;474:1;467:15;505:4;502:1;495:15;359:161;;146:380;;;:::o;657:518::-;759:2;754:3;751:11;748:421;;;795:5;792:1;785:16;839:4;836:1;826:18;909:2;897:10;893:19;890:1;886:27;880:4;876:38;945:4;933:10;930:20;927:47;;;-1:-1:-1;968:4:3;927:47;1023:2;1018:3;1014:12;1011:1;1007:20;1001:4;997:31;987:41;;1078:81;1096:2;1089:5;1086:13;1078:81;;;1155:1;1141:16;;1122:1;1111:13;1078:81;;;1082:3;;748:421;657:518;;;:::o;1351:1299::-;1471:10;;-1:-1:-1;;;;;1493:30:3;;1490:56;;;1526:18;;:::i;:::-;1555:97;1645:6;1605:38;1637:4;1631:11;1605:38;:::i;:::-;1599:4;1555:97;:::i;:::-;1701:4;1732:2;1721:14;;1749:1;1744:649;;;;2437:1;2454:6;2451:89;;;-1:-1:-1;2506:19:3;;;2500:26;2451:89;-1:-1:-1;;1308:1:3;1304:11;;;1300:24;1296:29;1286:40;1332:1;1328:11;;;1283:57;2553:81;;1714:930;;1744:649;604:1;597:14;;;641:4;628:18;;-1:-1:-1;;1780:20:3;;;1898:222;1912:7;1909:1;1906:14;1898:222;;;1994:19;;;1988:26;1973:42;;2101:4;2086:20;;;;2054:1;2042:14;;;;1928:12;1898:222;;;1902:3;2148:6;2139:7;2136:19;2133:201;;;2209:19;;;2203:26;-1:-1:-1;;2292:1:3;2288:14;;;2304:3;2284:24;2280:37;2276:42;2261:58;2246:74;;2133:201;-1:-1:-1;;;;2380:1:3;2364:14;;;2360:22;2347:36;;-1:-1:-1;1351:1299:3:o;:::-;65:1582:0;;;;;;",
+  "sourcePath": "contracts/Election.sol",
+  "type": "contract"
+}
